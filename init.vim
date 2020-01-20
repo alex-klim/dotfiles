@@ -34,8 +34,15 @@ Plug 'bronson/vim-trailing-whitespace'      " highlight trailing spaces
 Plug 'Raimondi/delimitMate'                 " automatic closing brackets, quotes, etc.
 Plug 'majutsushi/tagbar'                    " tag bar for defined structures in file
 Plug 'sheerun/vim-polyglot'                 " language pack
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-unimpaired'
 Plug 'jsfaint/gen_tags.vim'                 " tags
-Plug 'gilsondev/searchtasks.vim'            " serach TODO FIXME
+Plug 'gilsondev/searchtasks.vim'            " search TODO FIXME
+Plug 'atelierbram/Base2Tone-vim'            " colorscheme
+Plug 'igrmk/kull-vim'
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else
@@ -64,6 +71,9 @@ Plug 'xolox/vim-session'
 Plug 'zchee/deoplete-clang'                 " clang autocomplete
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
 let g:deoplete#sources#clang#clang_header = '/usr/include/clang/'
+
+" Brand new vim8 intellisense
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 
 " Color scheme
 Plug 'AlessandroYorba/Alduin'
@@ -150,7 +160,8 @@ set ruler
 set number
 
 let no_buffers_menu=1
-colorscheme alduin
+colorscheme kull
+"colorscheme Base2Tone_ForestDark
 
 set mousemodel=popup
 set t_Co=256
@@ -203,7 +214,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'deus'
+let g:airline_theme = 'term'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -417,6 +428,7 @@ autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
 
 " lua
 autocmd FileType lua setlocal tabstop=2 shiftwidth=2 expandtab
+let g:lua_inspect_events = ''
 
 " python
 " vim-python
