@@ -43,6 +43,8 @@ Plug 'jsfaint/gen_tags.vim'                 " tags
 Plug 'gilsondev/searchtasks.vim'            " search TODO FIXME
 Plug 'atelierbram/Base2Tone-vim'            " colorscheme
 Plug 'igrmk/kull-vim'
+Plug 'wellle/context.vim'                   " for showing current context
+Plug 'tpope/vim-commentary'                 " hotkeys for comments
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else
@@ -85,7 +87,7 @@ Plug 'xolox/vim-lua-inspect'
 
 " python
 "" Python Bundle
-Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 "" Include user's extra bundle
@@ -440,16 +442,16 @@ augroup vimrc-python
 augroup END
 
 " jedi-vim
-let g:jedi#popup_on_dot = 0
-let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#goto_definitions_command = "<leader>d"
-let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>n"
-let g:jedi#rename_command = "<leader>r"
-let g:jedi#show_call_signatures = "0"
-let g:jedi#completions_command = "<C-Space>"
-let g:jedi#smart_auto_mappings = 0
-let g:jedi#use_splits_not_buffers = "right"
+"let g:jedi#popup_on_dot = 0
+"let g:jedi#goto_assignments_command = "<leader>g"
+"let g:jedi#goto_definitions_command = "<leader>d"
+"let g:jedi#documentation_command = "K"
+"let g:jedi#usages_command = "<leader>n"
+"let g:jedi#rename_command = "<leader>r"
+"let g:jedi#show_call_signatures = "0"
+"let g:jedi#completions_command = "<C-Space>"
+"let g:jedi#smart_auto_mappings = 0
+"let g:jedi#use_splits_not_buffers = "right"
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
